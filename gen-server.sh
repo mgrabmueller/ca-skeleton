@@ -12,7 +12,7 @@ openssl req -config intermediate/openssl.cnf \
       -new -sha256 -out intermediate/csr/$uuid.csr.pem
 
 openssl ca -config intermediate/openssl.cnf \
-      -extensions server_cert -days 375 -notext -md sha256 \
+      -extensions server_client_cert -days 375 -notext -md sha256 \
       -in intermediate/csr/$uuid.csr.pem \
       -out intermediate/certs/$uuid.cert.pem
 
