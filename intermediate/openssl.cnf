@@ -77,12 +77,13 @@ commonName                      = Common Name
 emailAddress                    = Email Address
 
 # Optionally, specify some defaults.
-countryName_default             = DE
-stateOrProvinceName_default     = Berlin
-localityName_default            = Berlin
-0.organizationName_default      = Peerington
+countryName_default            = DE
+stateOrProvinceName_default    = Berlin
+localityName_default           = Berlin
+0.organizationName_default     = Internal
 organizationalUnitName_default = Engineering
-emailAddress_default           = martin@grabmueller.de
+commonName_default             = $ENV::COMMON_NAME
+emailAddress_default           = test@example.com
 
 [ v3_ca ]
 # Extensions for a typical CA (`man x509v3_config`).

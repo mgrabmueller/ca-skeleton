@@ -1,4 +1,4 @@
-# Based on https://jamielinux.com/docs/openssl-certificate-authority/create-the-root-pair.html
+# Based on https://jamielinux.com/docs/openssl-certificate-authority/
 
 [ ca ]
 # `man ca`
@@ -77,12 +77,13 @@ commonName                      = Common Name
 emailAddress                    = Email Address
 
 # Optionally, specify some defaults.
-countryName_default             = DE
-stateOrProvinceName_default     = Berlin
-localityName_default            = Berlin
-0.organizationName_default      = Peerington
-organizationalUnitName_default = Engineering
-emailAddress_default           = martin@grabmueller.de
+countryName_default            = DE
+stateOrProvinceName_default    = Berlin
+localityName_default           = Berlin
+0.organizationName_default     = Internal
+organizationalUnitName_default = CA Department
+emailAddress_default           = test@example.com
+commonName_default             = $ENV::COMMON_NAME
 
 [ v3_ca ]
 # Extensions for a typical CA (`man x509v3_config`).
