@@ -60,6 +60,8 @@ default_bits        = 2048
 distinguished_name  = req_distinguished_name
 string_mask         = utf8only
 
+prompt              = no
+
 # SHA-1 is deprecated, so use SHA-2 instead.
 default_md          = sha256
 
@@ -68,22 +70,14 @@ x509_extensions     = v3_ca
 
 [ req_distinguished_name ]
 # See <https://en.wikipedia.org/wiki/Certificate_signing_request>.
-countryName                     = Country Name (2 letter code)
-stateOrProvinceName             = State or Province Name
-localityName                    = Locality Name
-0.organizationName              = Organization Name
-organizationalUnitName          = Organizational Unit Name
-commonName                      = Common Name
-emailAddress                    = Email Address
 
-# Optionally, specify some defaults.
-countryName_default            = DE
-stateOrProvinceName_default    = Berlin
-localityName_default           = Berlin
-0.organizationName_default     = Internal
-organizationalUnitName_default = CA Department
-emailAddress_default           = test@example.com
-commonName_default             = $ENV::COMMON_NAME
+C = DE
+ST = Berlin
+L = Berlin
+O = Internal
+OU = CA Department
+CN = $ENV::COMMON_NAME
+emailAddress = test@example.com
 
 [ v3_ca ]
 # Extensions for a typical CA (`man x509v3_config`).
