@@ -1,6 +1,8 @@
 # ca-skeleton
 Skeleton setup for OpenSSL CA.
 
+'''Never use these scripts in production. The passwords used to protect the secret keys are static and public.'''
+
 The code in this repo can be used when you need to set up a private CA
 for testing or learning purposes.  The included tools let you create a
 root CA, by generating a CA private key and the files OpenSSL requires
